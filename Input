@@ -16,7 +16,7 @@ Function Invoke-InputBox {
         [Parameter(ParameterSetName="secure")]        
         [Parameter(HelpMessage = "Enter a prompt. No more than 50 characters.",ParameterSetName="plain")]
         [ValidateNotNullorEmpty()]
-        [ValidateScript({$_.length -le 50})]
+        [ValidateScript({$_.length -le 500})]
         [string]$Prompt = "Please enter a value:",
         
         [Parameter(HelpMessage = "Use to mask the entry and return a secure string.",
@@ -42,8 +42,8 @@ Function Invoke-InputBox {
 
     #define what it looks like
     $form.Title = $title
-    $form.Height = 150
-    $form.Width = 350
+    $form.Height = 200
+    $form.Width = 400
 
     $label = New-Object System.Windows.Controls.Label
     $label.Content = "    $Prompt"
