@@ -24,11 +24,11 @@ Function Invoke-InputBox {
         [switch]$AsSecureString
     )
 
-    if ($PSEdition -eq 'Core') {
-        Write-Warning "Sorry. This command will not run on PowerShell Core."
-        #bail out
-        Return
-    }
+    #if ($PSEdition -eq 'Core') {
+    #    Write-Warning "Sorry. This command will not run on PowerShell Core."
+    #    #bail out
+    #    Return
+    #}
 
     Add-Type -AssemblyName PresentationFramework
     Add-Type –assemblyName PresentationCore
