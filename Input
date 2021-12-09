@@ -47,7 +47,7 @@ Function Invoke-InputBox {
 
     $label = New-Object System.Windows.Controls.Label
     $label.Content = "    $Prompt"
-    $label.HorizontalAlignment = "left"
+    $label.HorizontalAlignment = "center"
     $stack.AddChild($label)
 
     if ($AsSecureString) {
@@ -108,6 +108,7 @@ Function Invoke-InputBox {
 
     #show the form
     $inputbox.Focus() | Out-Null
+    $form.WindowState = 'Maximized'
     $form.WindowStartupLocation = [System.Windows.WindowStartupLocation]::CenterScreen
 
     $form.ShowDialog() | out-null
