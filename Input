@@ -42,8 +42,8 @@ Function Invoke-InputBox {
 
     #define what it looks like
     $form.Title = $title
-    $form.Height = 400
-    $form.Width = 1500
+    $form.Height = 600
+    $form.Width = 2500
 
     $label = New-Object System.Windows.Controls.Label
     $label.Content = "    $Prompt"
